@@ -18,4 +18,4 @@ describe('SumaComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+}); 

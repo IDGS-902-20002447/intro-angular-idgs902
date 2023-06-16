@@ -9,8 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { SumaComponent } from './utl/formularios/suma/suma.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OperasBasComponent } from './utl/formularios/operas-bas/operas-bas.component';
-import  {MatFormFieldModule, MatInputModule, NgIf, MatButtonModule, MatIconModule};
-
+import { NgIf } from '@angular/common';
+ 
 
 @NgModule({
   declarations: [
@@ -25,7 +25,9 @@ import  {MatFormFieldModule, MatInputModule, NgIf, MatButtonModule, MatIconModul
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+      NgIf,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

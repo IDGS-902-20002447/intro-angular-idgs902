@@ -13,7 +13,7 @@ describe('OperasBasComponent', () => {
     fixture = TestBed.createComponent(OperasBasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }); 
 
   it('should create', () => {
     expect(component).toBeTruthy();

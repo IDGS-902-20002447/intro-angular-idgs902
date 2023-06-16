@@ -10,3 +10,4 @@ export class OperasBasComponent {
   value = 'Clear me';
 
 }
+ 

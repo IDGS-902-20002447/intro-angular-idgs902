@@ -4,11 +4,11 @@ import { AlumnosIri } from '../alumnos-iri';
 @Component({
   selector: 'app-iric',
   templateUrl: './iric.component.html',
-  styleUrls: ['./iric.component.css']
+  styleUrls: ['./iric.component.css'] 
 })
 export class IricComponent {
 //Binding propierties: Enlace de propiedades
-  imageWidth:number=50;
+  imageWidth:number=50; 
   imageMargin:number=2;
 
 //Event Propierty

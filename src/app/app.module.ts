@@ -8,9 +8,11 @@ import { IricComponent } from './utl/iric/iric.component';
 import { FormsModule } from '@angular/forms';
 import { SumaComponent } from './utl/formularios/suma/suma.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OperasBasComponent } from './utl/formularios/operas-bas/operas-bas.component';
-import { NgIf } from '@angular/common';
- 
+import { MenuComponent } from './utl/menu/menu.component';
+import { OperasModule } from './utl/formularios/operas/operas.module';
+import { DistanciaModuleModule } from './distancia-module/distancia-module.module';
+
+
 
 @NgModule({
   declarations: [
@@ -20,14 +22,16 @@ import { NgIf } from '@angular/common';
     IdgsComponent,
     IricComponent,
     SumaComponent,
-    OperasBasComponent
+    MenuComponent,
+   
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-      NgIf,
- 
+    OperasModule,
+    DistanciaModuleModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

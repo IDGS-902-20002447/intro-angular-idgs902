@@ -3,7 +3,8 @@ export interface AlumnosIri {
     nombre:string,
     edad:number,
     correo:string,
-    foto:string
+    foto:string,
+    calif:number
   
 }
 

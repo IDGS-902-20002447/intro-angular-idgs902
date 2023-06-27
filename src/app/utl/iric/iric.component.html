@@ -19,33 +19,40 @@
         <table class="table" *ngIf="alumnoIric.length">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Matricula</th>
-                    <th>Correo</th>
-                    <th>Edad</th>
-                    <!--Event propierty-->
                     <th>
                         <button class="btn btn-primary" (click)="showImage()">
                             {{muestraImg?'Ocultar':'Muestra'}}Imagen</button>
                     </th>
-                    <th>Foto</th> 
+                    <th>Nombre</th>
+                    <th>Matricula</th>
+                    <th>Correo</th>
+                    <th>Edad</th>
+
+                    <!--Event propierty-->
+                    
+                    <th>Calificacion {{alumnoTitle}}</th>
                 </tr>
             </thead>
        
         <tbody>
            
-            <tr *ngFor="let alumno of alumnoIric">
-                <td>{{alumno.nombre}}</td>
-                <td>{{alumno.matricula}}</td>
-                <td>{{alumno.correo}}</td>
-                <td>{{alumno.edad}}</td>
-                 <!--Binding propierties: Enlace de propiedades-->
+            <tr *ngFor="let alumno of alumnoIric | alumnooFilter:listFilter">
+                <!--Binding propierties: Enlace de propiedades-->
                 <td><img *ngIf="muestraImg"
                     [src]="alumno.foto" 
                     [title]="alumno.nombre"
                     [style.width.px]="imageWidth"
                     [style.margin.px]="imageMargin"
                 ></td>
+                <td>{{alumno.nombre}}</td>
+                <td>{{alumno.matricula}}</td>
+                <td>{{alumno.correo}}</td>
+                <td>{{alumno.edad}}</td>
+                <td><app-calificacion-alum (calificaClick)="onCalificaClick($event)"
+                    [califica]="alumno.calif">
+                </app-calificacion-alum>
+                </td>
+                
             </tr>
         </tbody>
     </table>

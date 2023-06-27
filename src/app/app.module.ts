@@ -11,6 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './utl/menu/menu.component';
 import { OperasModule } from './utl/formularios/operas/operas.module';
 import { DistanciaModuleModule } from './distancia-module/distancia-module.module';
+import { CalificacionAlumComponent } from './utl/calificacion-alum/calificacion-alum.component';
+import { AlumnoFilterComponent } from './utl/alumno-filter/alumno-filter.component';
+import { AlumnoFilterPipe } from './utl/alumno-filter.pipe';
 
 
 
@@ -23,7 +26,10 @@ import { DistanciaModuleModule } from './distancia-module/distancia-module.modul
     IricComponent,
     SumaComponent,
     MenuComponent,
-   
+    CalificacionAlumComponent,
+    AlumnoFilterComponent,
+    AlumnoFilterPipe,
+
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { AlumnosIri } from './alumnos-iri';
+import { IAlumnosIric } from './alumnos-iri';
 
 @Pipe({
   name: 'alumnoFilter'
 })
 export class AlumnoFilterPipe implements PipeTransform {
 
-  transform(value: AlumnosIri[],args: string): AlumnosIri[] {
+  transform(value: IAlumnosIric[],args: string): IAlumnosIric[] {
     let filter:string=args ?args.toLocaleLowerCase():'';
-
-    return filter? value.filter((alumno:AlumnosIri)=>
-    alumno.nombre.toLocaleLowerCase().indexOf(filter)!=-1)
-    :value;
+    return filter? value.filter((alumno:IAlumnosIric)=>
+    alumno.nombre.toLocaleLowerCase().indexOf(filter)!=-1
+    ):value;
   }
 
 }

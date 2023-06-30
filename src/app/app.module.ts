@@ -5,15 +5,16 @@ import { NameGrupos } from './utl/grupos.components';
 import { Idgs902 } from './idgs902/idgs902.components';
 import { IdgsComponent } from './utl/idgs/idgs.component';
 import { IricComponent } from './utl/iric/iric.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SumaComponent } from './utl/formularios/suma/suma.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './utl/menu/menu.component';
 import { OperasModule } from './utl/formularios/operas/operas.module';
 import { DistanciaModuleModule } from './distancia-module/distancia-module.module';
 import { CalificacionAlumComponent } from './utl/calificacion-alum/calificacion-alum.component';
-import { AlumnoFilterComponent } from './utl/alumno-filter/alumno-filter.component';
 import { AlumnoFilterPipe } from './utl/alumno-filter.pipe';
+import { AlumnosReactiveComponent } from './formularios/alumnos-reactive/alumnos-reactive.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -27,8 +28,8 @@ import { AlumnoFilterPipe } from './utl/alumno-filter.pipe';
     SumaComponent,
     MenuComponent,
     CalificacionAlumComponent,
-    AlumnoFilterComponent,
     AlumnoFilterPipe,
+    AlumnosReactiveComponent
 
   ],
   imports: [
@@ -36,7 +37,9 @@ import { AlumnoFilterPipe } from './utl/alumno-filter.pipe';
     FormsModule,
     BrowserAnimationsModule,
     OperasModule,
-    DistanciaModuleModule
+    DistanciaModuleModule,
+    ReactiveFormsModule,
+    AppRoutingModule
     
   ],
   providers: [],

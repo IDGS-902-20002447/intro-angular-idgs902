@@ -29,14 +29,13 @@
                     <th>Edad</th>
 
                     <!--Event propierty-->
-                    
                     <th>Calificacion {{alumnoTitle}}</th>
                 </tr>
             </thead>
        
         <tbody>
            
-            <tr *ngFor="let alumno of alumnoIric | alumnooFilter:listFilter">
+            <tr *ngFor="let alumno of alumnoIric | alumnoFilter:listFilter">
                 <!--Binding propierties: Enlace de propiedades-->
                 <td><img *ngIf="muestraImg"
                     [src]="alumno.foto" 
@@ -48,9 +47,9 @@
                 <td>{{alumno.matricula}}</td>
                 <td>{{alumno.correo}}</td>
                 <td>{{alumno.edad}}</td>
-                <td><app-calificacion-alum (calificaClick)="onCalificaClick($event)"
-                    [califica]="alumno.calif">
-                </app-calificacion-alum>
+                <td>
+                    <app-calificacion-alum (calificaClick)="onCalificaClick($event)" [califica]="alumno.calif">
+                    </app-calificacion-alum> 
                 </td>
                 
             </tr>

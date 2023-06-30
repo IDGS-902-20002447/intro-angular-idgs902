@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlumnosIri } from '../alumnos-iri';
+import { IAlumnosIric } from '../alumnos-iri';
 
 @Component({
   selector: 'app-iric',
@@ -23,7 +23,7 @@ export class IricComponent {
   }
 
 
-  alumnoIric:AlumnosIri[]=[
+  alumnoIric:IAlumnosIric[]=[
     {
       matricula:1234,
       nombre:'Mario',
